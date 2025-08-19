@@ -1,0 +1,21 @@
+# Ignorar dependencias
+# No subir las librerías de Python instaladas
+/venv/
+__pycache__/
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar datos sensibles o de usuario
+# Si usaras una base de datos, ignorarías el archivo
+# Por ejemplo:
+# *.db
+# *.sqlite
+
+# Ignorar archivos de Python autogenerados
+*.pyc
+
+# Ignorar archivos temporales
+*.tmp
+*.log

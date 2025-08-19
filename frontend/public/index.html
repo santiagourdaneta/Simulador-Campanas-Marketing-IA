@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Campañas</title>
+    <meta name="description" content="Predice el ROI de tus campañas publicitarias.">
+    <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="Simulador de Marketing">
+    <meta property="og:description" content="Predice el ROI de tus campañas publicitarias.">
+    <meta property="og:image" content="URL_A_UNA_IMAGEN_ATRACTIVA_DEL_SIMULADOR">
+    <meta property="og:url" content="URL_DEL_SITIO_WEB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simulador de Marketing">
+    <meta name="twitter:description" content="Predice el ROI de tus campañas publicitarias.">
+    <meta name="twitter:image" content="URL_A_UNA_IMAGEN_ATRACTIVA">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Simulador de Campañas de Marketing 🔮</h1>
+        <p>Predice el rendimiento de tu campaña publicitaria.</p>
+
+        <form id="simulation-form">
+            <div class="form-group">
+                <label for="presupuesto">Presupuesto ($):</label>
+                <input type="number" id="presupuesto" required min="1">
+            </div>
+
+            <div class="form-group">
+                <label for="audiencia">Tipo de Audiencia:</label>
+                <select id="audiencia" required>
+                    <option value="0">General</option>
+                    <option value="1">Específica</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="plataforma">Plataforma:</label>
+                <select id="plataforma" required>
+                    <option value="0">Facebook</option>
+                    <option value="1">Google Ads</option>
+                </select>
+            </div>
+
+            <button type="submit">Simular Campaña</button>
+        </form>
+
+        <div id="resultados" class="resultados-card">
+            <h2>Resultados de la Simulación</h2>
+            <p><strong>Éxito de la Audiencia:</strong> <span id="resultado-exito">...</span></p>
+            <p><strong>ROI Predicho:</strong> <span id="resultado-roi">...</span></p>
+            <p><strong>Riesgo:</strong> <span id="resultado-riesgo">...</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
