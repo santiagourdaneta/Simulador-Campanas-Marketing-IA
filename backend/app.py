@@ -3,7 +3,10 @@ from flask_cors import CORS
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 import pandas as pd
+import logging
 
+# Configure logging
+logging.basicConfig(level=logging.ERROR)
 app = Flask(__name__)
 CORS(app)
 
@@ -69,7 +72,8 @@ def simular_campana():
         })
 
     except Exception as e:
-        return jsonify({'error': str(e)}), 400
+        logging.error("Exception in /simular: ", exc_info=True)
+        return jsonify({'error': 'An internal error has occurred.'}), 400
 
 if __name__ == '__main__':
     app.run()
